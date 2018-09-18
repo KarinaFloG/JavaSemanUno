@@ -3,6 +3,7 @@ class Tienda{
 	private String direccion;
 	private int contProductos;
 	private int contEmpleados;
+	private float cantidadDinero;
 	//Variable estaticas
 	static  float cantDinero;
 	static  int contTiendas;
@@ -20,7 +21,7 @@ class Tienda{
 		contTiendas++;
 	}
 	//Constructor con parametros
-	public void Tienda(String direccion){
+	public void Tienda(String direccion, float cantidadDinero){
 	        Producto p1 = new Producto();
                 Producto p2 = new Producto();
                 Producto p3 = new Producto();
@@ -32,6 +33,7 @@ class Tienda{
 		this.direccion = direccion;
 		this.contProductos = p4.getCont();;
 		this.contEmpleados = e4.getCont();
+		this.cantidadDinero = cantidadDinero;
 		contTiendas++;
 	}
 	//Setter para la direccion de la tienda
@@ -51,7 +53,7 @@ class Tienda{
 		return contProductos;
 	}
 	//Setter para la cantidad de empleados
-	public void setContEmpleados(int contEmpleados){
+	public int setContEmpleados(int contEmpleados){
 		return contEmpleados;
 	}
 	//Getter para la cantidad de empleados
@@ -66,5 +68,12 @@ class Tienda{
 	public static float getContTiendas(){
 		return contTiendas;
 	}
-
+	//Setter para la cantidad de dinero de cada tienda
+	public void setCantidadDinero(float cantidadDinero){
+		this.cantidadDinero = cantidadDinero;
+	}
+	//Getter para la cantidad de dinero de cada tienda
+	public float getCantidadDinero(){
+		return cantidadDinero;
+	}
 }
