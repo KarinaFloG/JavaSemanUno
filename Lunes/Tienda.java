@@ -20,11 +20,8 @@ class Tienda{
 		contTiendas++;
 	}
 	//Constructor con parametros
-	public void Tienda(String direccion, int contProductos, int contEmpleados){
-		this.direccion = direccion;
-		this.contProductos = contProdutos;
-		this.contEmpleados = contEmpleados;
-                Producto p1 = new Producto();
+	public void Tienda(String direccion){
+	        Producto p1 = new Producto();
                 Producto p2 = new Producto();
                 Producto p3 = new Producto();
                 Producto p4 = new Producto();
@@ -32,6 +29,9 @@ class Tienda{
                 Empleado e2 = new Empleado();
                 Empleado e3 = new Empleado();
                 Empleado e4 = new Empleado();
+		this.direccion = direccion;
+		this.contProductos = p4.getCont();;
+		this.contEmpleados = e4.getCont();
 		contTiendas++;
 	}
 	//Setter para la direccion de la tienda

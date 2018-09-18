@@ -3,7 +3,7 @@ class Producto{
 	private String nombre;
 	private float precio;
 	//Variables estaticas
-	static cont;
+	static int cont;
 	//Constructor vacio
 	Producto(){
 		cont++;
@@ -35,6 +35,8 @@ class Producto{
 	public float getPrecio(){
 		return precio;
 	}
-
-
+	//Getter para el contador de productos
+	public static int getCont(){
+		return cont;
+	}
 }
