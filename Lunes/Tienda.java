@@ -3,37 +3,38 @@ class Tienda{
 	private String direccion;
 	private int contProductos;
 	private int contEmpleados;
-	private float cantidadDinero;
+	private double cantidadDinero;
 	//Variable estaticas
-	static  float cantDinero;
+	static  double cantDinero;
 	static  int contTiendas;
 
 	//Constructor vacio
-	public void Tienda(){
-		Producto p1 = new Producto();
-                Producto p2 = new Producto();
-		Producto p3 = new Producto();
-		Producto p4 = new Producto();
-		Empleado e1 = new Empleado();
-		Empleado e2 = new Empleado();
-		Empleado e3 = new Empleado();
-		Empleado e4 = new Empleado();
+	public Tienda(){
+		Producto p1 = new Producto("Lechita", 23);
+                Producto p2 = new Producto("Pan", 10);
+		Producto p3 = new Producto("Galletas", 30);
+		Producto p4 = new Producto("Huevo", 5);
+		Empleado e1 = new Empleado("Juan", 200, "Jefe");
+		Empleado e2 = new Empleado("Pedro", 300, "Gerente");
+		Empleado e3 = new Empleado("Maria", 400, "Empleado");
+		Empleado e4 = new Empleado("Gabriel", 500, "Empleado");
 		contTiendas++;
 	}
 	//Constructor con parametros
-	public void Tienda(String direccion, float cantidadDinero){
-	        Producto p1 = new Producto();
-                Producto p2 = new Producto();
-                Producto p3 = new Producto();
-                Producto p4 = new Producto();
-                Empleado e1 = new Empleado();
-                Empleado e2 = new Empleado();
-                Empleado e3 = new Empleado();
-                Empleado e4 = new Empleado();
+	public Tienda(String direccion, double cantidadDinero){
+	        Producto p1 = new Producto("Lechita", 23);
+                Producto p2 = new Producto("Pan", 10);
+                Producto p3 = new Producto("Galletas", 30);
+                Producto p4 = new Producto("Huevo", 5);
+                Empleado e1 = new Empleado("Juan", 200, "Jefe");
+                Empleado e2 = new Empleado("Pedro", 300, "Gerente");
+                Empleado e3 = new Empleado("Maria", 400, "Empleado");
+                Empleado e4 = new Empleado("Gabriel", 500, "Empleado");
 		this.direccion = direccion;
-		this.contProductos = p4.getCont();;
-		this.contEmpleados = e4.getCont();
+		this.contProductos = Producto.getCont();
+		this.contEmpleados = Producto.getCont();
 		this.cantidadDinero = cantidadDinero;
+		this.cantDinero = this.cantDinero + this.cantidadDinero;
 		contTiendas++;
 	}
 	//Setter para la direccion de la tienda
@@ -45,8 +46,8 @@ class Tienda{
 		return direccion;
 	}
 	//Setter para la cantidad de productos
-	public void setContProductos(int contProdutos){
-		this.contProductos = contProductos;
+	public void setContProductos(){
+		this.contProductos = Producto.getCont();
 	}
 	//Getter para la cantidad de productos
 	public int getContProductos(){
@@ -61,7 +62,7 @@ class Tienda{
 		return contEmpleados;
 	}
 	//Getter para la cantidad total de dinero
-	public static float getCantDinero(){
+	public static double getCantDinero(){
 		return cantDinero;
 	}
 	//Getter para la cantidad total de tiendas
@@ -73,7 +74,7 @@ class Tienda{
 		this.cantidadDinero = cantidadDinero;
 	}
 	//Getter para la cantidad de dinero de cada tienda
-	public float getCantidadDinero(){
+	public double getCantidadDinero(){
 		return cantidadDinero;
 	}
 }

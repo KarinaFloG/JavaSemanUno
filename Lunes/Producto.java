@@ -5,19 +5,19 @@ class Producto{
 	//Variables estaticas
 	static int cont;
 	//Constructor vacio
-	Producto(){
+	public Producto(){
 		cont++;
 	}
 
 	//Constructor con parametros
-	Producto(String nombre, float precio){
+	public Producto(String nombre, float precio){
 		setNombre(nombre);
 		setPrecio(precio);
 		cont++;
 	}
 
 	//Setter para el nombre
-	public void setNombre(String nombre){
+	public void  setNombre(String nombre){
 		this.nombre = nombre;
 	}
 

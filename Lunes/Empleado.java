@@ -7,11 +7,11 @@ public class Empleado{
 	static int cont;
 
 	//Contructor vacio
-	public void Empleado(){
+	public Empleado(){
 		cont++;
 	}
 	//Constructor con parametros
-	public void Empleado(String nombre, float sueldo, String puesto){
+	public Empleado(String nombre, float sueldo, String puesto){
 		this.nombre = nombre;
 		this.sueldo = sueldo;
 		this.puesto = puesto;
