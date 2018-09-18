@@ -31,8 +31,8 @@ class Tienda{
                 Empleado e3 = new Empleado("Maria", 400, "Empleado");
                 Empleado e4 = new Empleado("Gabriel", 500, "Empleado");
 		this.direccion = direccion;
-		this.contProductos = Producto.getCont();
-		this.contEmpleados = Producto.getCont();
+		this.contProductos = Producto.getConstante();
+		this.contEmpleados = Producto.getConstante();
 		this.cantidadDinero = cantidadDinero;
 		this.cantDinero = this.cantDinero + this.cantidadDinero;
 		contTiendas++;
@@ -60,6 +60,10 @@ class Tienda{
 	//Getter para la cantidad de empleados
 	public int getContEmpleados(){
 		return contEmpleados;
+	}
+	//Setter para la cantidad total de dinero
+	public void setCantDinero(){
+		this.cantDinero = this.cantDinero + this.cantidadDinero;
 	}
 	//Getter para la cantidad total de dinero
 	public static double getCantDinero(){

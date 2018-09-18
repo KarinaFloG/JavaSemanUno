@@ -2,6 +2,7 @@ class Producto{
 	//Atributos de la clase producto
 	private String nombre;
 	private float precio;
+	static final int cantidad = 4;
 	//Variables estaticas
 	static int cont;
 	//Constructor vacio
@@ -38,5 +39,9 @@ class Producto{
 	//Getter para el contador de productos
 	public static int getCont(){
 		return cont;
+	}
+	//Getter para la constante
+	public static int getConstante(){
+		return  cantidad;
 	}
 }

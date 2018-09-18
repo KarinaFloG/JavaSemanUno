@@ -3,6 +3,7 @@ public class Empleado{
 	private String puesto;
 	private String nombre;
 	private float sueldo;
+	static final int cantidad = 4;
 	//Variables  estaticas
 	static int cont;
 
@@ -44,5 +45,9 @@ public class Empleado{
 	//Getter para el contador de empleados;
 	public static int getCont(){
 		return cont;
+	}
+	//Getter para la cantidad total de empleados por tienda
+	public static int getConstante(){
+		return cantidad;
 	}
 }
