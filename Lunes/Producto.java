@@ -2,16 +2,18 @@ class Producto{
 	//Atributos de la clase producto
 	private String nombre;
 	private float precio;
-
+	//Variables estaticas
+	static cont;
 	//Constructor vacio
 	Producto(){
-
+		cont++;
 	}
 
 	//Constructor con parametros
 	Producto(String nombre, float precio){
 		setNombre(nombre);
 		setPrecio(precio);
+		cont++;
 	}
 
 	//Setter para el nombre
