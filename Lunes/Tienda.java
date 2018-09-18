@@ -17,7 +17,7 @@ class Tienda{
 		Empleado e2 = new Empleado();
 		Empleado e3 = new Empleado();
 		Empleado e4 = new Empleado();
-
+		contTiendas++;
 	}
 	//Constructor con parametros
 	public void Tienda(String direccion, int contProductos, int contEmpleados){
@@ -32,6 +32,7 @@ class Tienda{
                 Empleado e2 = new Empleado();
                 Empleado e3 = new Empleado();
                 Empleado e4 = new Empleado();
+		contTiendas++;
 	}
 	//Setter para la direccion de la tienda
 	public void setDireccion(String direccion){
