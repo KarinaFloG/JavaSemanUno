@@ -9,6 +9,14 @@ class Tienda{
 
 	//Constructor vacio
 	public void Tienda(){
+		Producto p1 = new Producto();
+                Producto p2 = new Producto();
+		Producto p3 = new Producto();
+		Producto p4 = new Producto();
+		Empleado e1 = new Empleado();
+		Empleado e2 = new Empleado();
+		Empleado e3 = new Empleado();
+		Empleado e4 = new Empleado();
 
 	}
 	//Constructor con parametros
