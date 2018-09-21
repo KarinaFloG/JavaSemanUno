@@ -32,7 +32,8 @@ public class PruebaMatrices{
 		public static void main(String[] args){
 //	  		 Para leer datos del teclado
 		        Scanner sc = new Scanner(System.in);
-
+			int opcion;
+			int booleano = 1;
 			int elementos;
 			int valor;
 
@@ -70,22 +71,68 @@ public class PruebaMatrices{
 				}
 			}
 
-
-                        resultante = objeto.suma(matriz1, matriz2);
-			System.out.println("\n**La suma de matrices es: \n");
-
-                      	 for(int i = 0; i <= (resultante.get(0).size())/2; i++){
-                                for(int j = 0; j <= (resultante.get(0).size())/2; j++ ){
-                                       System.out.println(resultante.get(i).get(j));
-                                }
+//                        System.out.println("YA NAMAMES: " + matriz1.get(0).size());
 
 
-                       	 }
-/*			for(int i = 0; i <= elementos; i++){
-				for(int j = 0; j <= (matriz1.get(i).size())-1; j++){
-					System.out.println(resultante.get(i).get(j));
+			do{
+				opcion = menuOpciones();
+				switch(opcion){
+					case 1:
+ 	                      			resultante = objeto.suma(matriz1, matriz2);
+					 	System.out.println("\n**La suma de matrices es: \n");
+						System.out.println("YA NAMAMES X2: " + resultante.get(0).size());
+                      			 	for(int i = 0; i <= (resultante.get(0).size())/2; i++){
+                               				 for(int j = 0; j <= (resultante.get(0).size())/2; j++ ){
+                                      		 	System.out.println(resultante.get(i).get(j));
+	                               		 	 }
+						}
+//						resultante.clear();
+					break;
+
+
+					case 2:
+						 resultante = objeto.resta(matriz1, matriz2);
+                                        	 System.out.println("\n**La resta de matrices es: \n");
+
+                                         	for(int i = 0; i < (resultante.get(0).size())/2; i++){
+                                                	 for(int j = 0; j < (resultante.get(0).size())/2; j++ ){
+                                                 		System.out.println(resultante.get(i).get(j));
+                                                 	 }
+                                       	 	}
+
+/*						System.out.println(resultante.get(0));
+						System.out.println("******" + resultante.get(0).get(0));
+                                                System.out.println("******" + resultante.get(1).get(0));
+                                                System.out.println("******" + resultante.get(2).get(0));
+                                                System.out.println("******" + resultante.get(3).get(0));
+                                                System.out.println("------" + resultante.get(0).get(0));
+                                                System.out.println("------" + resultante.get(0).get(1));
+                                                System.out.println("------" + resultante.get(0).get(2));
+                                                System.out.println("------" + resultante.get(0).get(3)); */ 
+//						resultante.clear();
+
+					break;
+
+					case 3:
+/*						resultante = objeto.multiplicacion(matriz1, matriz2);
+						System.out.println("\n**La multiplicacion de matrices es: \n");
+
+                                                for(int i = 0; i < (resultante.get(0).size())/2; i++){
+                                                         for(int j = 0; j < (resultante.get(0).size())/2; j++ ){
+                                                                System.out.println(resultante.get(i).get(j));
+                                                         }
+                                                }
+						resultante.clear();
+
+					break; */
+
+					default:
+						System.out.println("Opcion incorrecta, intenta de nuevo");
+					break;
 				}
-			}*/
+
+			}while(booleano != 0);
+
 
 
 
