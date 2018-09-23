@@ -71,7 +71,13 @@ public class PruebaMatrices{
 				}
 			}
 
-//                        System.out.println("YA NAMAMES: " + matriz1.get(0).size());
+			//Imprime la smatrices solamente para prueba
+			System.out.println("**********************PRUEBA*********************");
+			for(int i = 0; i < elementos; i ++){
+				for(int j = 0; j < elementos; j++){
+					System.out.println(matriz1.get(i).get(j));
+				}
+			}
 
 
 			do{
